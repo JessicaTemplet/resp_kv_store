@@ -1,0 +1,15 @@
+[package]
+name = "resp_kv_store"
+version = "0.1.0"
+edition = "2021"
+description = "A minimal Redis-compatible in-memory key-value store speaking RESP over TCP. Supports GET, SET, DEL, and PING."
+license = "MIT"
+repository = "https://github.com/JessicaTemplet/resp_kv_store"
+
+[[bin]]
+name = "resp_kv_store"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "net", "io-util", "macros", "sync"] }
+bytes = "1"
